@@ -31,12 +31,39 @@ const personalMovieDB = {
 	genres: [],
 	privat: false,
 };
+// first variant
+if (personalMovieDB.count < 10 && personalMovieDB > 0) {
+	console.log('Просмотрено довольно мало фильмов.');
+} else if (personalMovieDB.count < 30) {
+	console.log('Вы классический зритель');
+} else if (personalMovieDB.count >= 30) {
+	console.log('Вы киноман');
+} else {
+	console.log('Error');
+}
+// second
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-	b = +prompt('На сколько оцените его?', ''),
-	c = prompt('Один из последних просмотренных фильмов?', ''),
-	d = +prompt('На сколько оцените его?', '');
+/* switch (personalMovieDB.count) {
+	case personalMovieDB.count > 0 && personalMovieDB.count < 10:
+		console.log('Просмотрено довольно мало фильмов.');
+		break;
+	case personalMovieDB.count < 30:
+		console.log('Вы классический зритель');
+		break;
+	case personalMovieDB.count >= 30:
+		console.log('Вы киноман');
+		break;
+	default:
+		console.log('Error');
+		break;
+} */
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB);
+/* let a, b;
+for (let i = 0; i < 2; i++) {
+	do {
+		a = prompt('Один из последних просмотренных фильмов?', '');
+	} while (a.length > 50 || a.length == 0);
+	b = +prompt('На сколько оцените его?', '');
+	personalMovieDB.movies[a] = b;
+}
+console.log(personalMovieDB); */
